@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +20,8 @@ public class Student extends Person {
     }
 
     public void addCourse(Course c){
-        courseList.add(c);
+        if (this.courseList == null)
+            this.courseList = new ArrayList<>();
+        this.courseList.add(c);
     }
 }
